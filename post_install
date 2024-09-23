@@ -12,10 +12,10 @@ CBL=$(tput setaf 4)
 BLD=$(tput bold)
 RESET=$(tput sgr0)
 
-#USERNAME="celasa"
-#PASSWORD="celasa"
+USERNAME="celasa"
+PASSWORD="celasa"
 
-#marks="/home/celasa/.config/google-chrome/Default/"
+marks="/home/celasa/.config/google-chrome/Default/"
 
 echo "${CYE}Actualizando el sistema...${RESET}"
 
@@ -35,7 +35,7 @@ echo "${CRE}Espere...${RESET}"
 
 wget -P /tmp/ https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb &> /dev/null
 
-#wget -P /tmp/  https://raw.githubusercontent.com/marvin09005/ub_cel/refs/heads/main/Bookmarks &> /dev/null
+wget -P /tmp/  https://raw.githubusercontent.com/marvin09005/ub_cel/refs/heads/main/Bookmarks &> /dev/null
 
 
 
@@ -68,7 +68,7 @@ done
 clear
 
 
-#{sudo useradd -m -p "$(openssl passwd -1 $PASSWORD)" $USERNAME
+sudo useradd -m -p "$(openssl passwd -1 $PASSWORD)" $USERNAME
 
 if id "$USERNAME" &>/dev/null; then
     echo "${CGR}El usuario '$USERNAME' fue creado exitosamente.${RESET}"
@@ -76,14 +76,21 @@ else
     echo "${CRE}Error: No se pudo crear el usuario '$USERNAME'.${RESET}"
 fi
 
+#echo "${CYE}Copiando configuraciones...${RESET}
+
+#sudo cp -r /home/oe/. /home/$USERNAME/ &> /dev/null
+
+#echo "${CGR}Hecho.${RESET}
+
 
 if [ ! -d "$marks" ]; then
     mkdir -p "$marks" 
     cp /tmp/Bookmarks "$marks"
+    chown -R $USERNAME:$USERNAME "$marks"
     echo "Marcadores agregados."
 else
     echo "${CRE}Error${RESET}"
-fi}
+fi
 
 clear
 
