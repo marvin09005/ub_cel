@@ -12,12 +12,12 @@ CBL=$(tput setaf 4)
 BLD=$(tput bold)
 RESET=$(tput sgr0)
 
-USERNAME="celasa"
-PASSWORD="celasa"
+#USERNAME="celasa"
+#PASSWORD="celasa"
 
-marks="/home/celasa/.config/google-chrome/Default/"
+#marks="/home/celasa/.config/google-chrome/Default/"
 
-echo "${CGR}Actualizando el sistema...${RESET}"
+echo "${CYE}Actualizando el sistema...${RESET}"
 
 apt update &> /dev/null
 
@@ -35,12 +35,12 @@ echo "${CRE}Espere...${RESET}"
 
 wget -P /tmp/ https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb &> /dev/null
 
-wget -P /tmp/  https://raw.githubusercontent.com/marvin09005/ub_cel/refs/heads/main/Bookmarks &> /dev/null
+#wget -P /tmp/  https://raw.githubusercontent.com/marvin09005/ub_cel/refs/heads/main/Bookmarks &> /dev/null
 
 
 
 while true; do
-    read -rp "¿Desea instalar Spark? ${CGR}S/n: ${RESET}" sn
+    read -rp "¿Desea instalar Spark? ${CYE}S/n: ${RESET}" sn
 
     if [ -z "$sn" ]; then
         sn="s"
@@ -48,14 +48,14 @@ while true; do
 
     case $sn in
         [Ss]* ) 
-          echo "Istalando programas..." 
+          echo "Instalando programas..." 
           wget -P /tmp/ https://github.com/igniterealtime/Spark/releases/download/v2.9.3/spark_2_9_3.deb &> /dev/null
           apt install default-jdk default-jre putty samba -y &> /dev/null 
           dpkg -i /tmp/*.deb &> /dev/null
             break 
             ;;
         [Nn]* ) 
-          echo "Istalando programas..." 
+          echo "Instalando programas..." 
           apt install default-jdk default-jre putty samba -y &> /dev/null 
           dpkg -i /tmp/*.deb &> /dev/null
             ;;
@@ -68,7 +68,7 @@ done
 clear
 
 
-sudo useradd -m -p "$(openssl passwd -1 $PASSWORD)" $USERNAME
+#{sudo useradd -m -p "$(openssl passwd -1 $PASSWORD)" $USERNAME
 
 if id "$USERNAME" &>/dev/null; then
     echo "${CGR}El usuario '$USERNAME' fue creado exitosamente.${RESET}"
@@ -83,8 +83,8 @@ if [ ! -d "$marks" ]; then
     echo "Marcadores agregados."
 else
     echo "${CRE}Error${RESET}"
-fi
+fi}
 
 clear
 
-echo "${CGR}Configuración finalizada."
+echo "${CGR}${BLD}Configuración finalizada."
