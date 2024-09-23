@@ -65,6 +65,8 @@ while true; do
     esac
 done
 
+sleep 2
+
 clear
 
 
@@ -75,6 +77,8 @@ if id "$USERNAME" &>/dev/null; then
 else
     echo "${CRE}Error: No se pudo crear el usuario '$USERNAME'.${RESET}"
 fi
+
+sleep 3
 
 #echo "${CYE}Copiando configuraciones...${RESET}
 
@@ -91,6 +95,8 @@ if [ ! -d "$marks" ]; then
 else
     echo "${CRE}Error${RESET}"
 fi
+
+sleep 2
 
 clear
 
