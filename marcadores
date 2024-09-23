@@ -1,8 +1,7 @@
 #!/bin/bash
 
-dir="~/.config/google-chrome/Default"
+dir="~/.config/google-chrome/Default/Bookmarks"
 
-mkdir -p $dir
 cp /tmp/Bookmarks $dir
 
 echo "Marcadores copiados"
