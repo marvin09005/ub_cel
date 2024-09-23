@@ -1,0 +1,76 @@
+{
+   "checksum": "48f78951f0de95031ff542e259a31d63",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "date_added": "13371521973417338",
+            "date_last_used": "0",
+            "guid": "a9bf1d5c-2390-401b-8851-b59fe1d43918",
+            "id": "5",
+            "name": "TechKontrol",
+            "type": "url",
+            "url": "http://192.177.50.50/techkontrol"
+         }, {
+            "date_added": "13371521993577625",
+            "date_last_used": "0",
+            "guid": "97dfe901-212c-4ebf-84a5-10341cb42d8f",
+            "id": "6",
+            "name": "Reportes",
+            "type": "url",
+            "url": "http://192.177.50.50/techkontrol_reportes"
+         }, {
+            "date_added": "13371522009577535",
+            "date_last_used": "13371522013088464",
+            "guid": "e6993331-8942-467a-880d-72056606847e",
+            "id": "7",
+            "name": "Mail Celasa",
+            "type": "url",
+            "url": "http://mail.celasa.com.gt/"
+         }, {
+            "date_added": "13371522031366606",
+            "date_last_used": "0",
+            "guid": "6267fcb7-a145-4a4a-a3b9-ff0be540e696",
+            "id": "8",
+            "name": "PidaCheque",
+            "type": "url",
+            "url": "https://pidacheque.5b.com.gt/"
+         }, {
+            "date_added": "13371522045144560",
+            "date_last_used": "0",
+            "guid": "c31c1abf-7e90-406b-8f7c-c2a498891cd4",
+            "id": "9",
+            "name": "vericheque",
+            "type": "url",
+            "url": "https://www.vericheque.bi.com.gt/"
+         } ],
+         "date_added": "13371521931839866",
+         "date_last_used": "0",
+         "date_modified": "13371522045144561",
+         "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
+         "id": "1",
+         "name": "Barra de favoritos",
+         "type": "folder"
+      },
+      "other": {
+         "children": [  ],
+         "date_added": "13371521931839878",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "82b081ec-3dd3-529c-8475-ab6c344590dd",
+         "id": "2",
+         "name": "Otros favoritos",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13371521931839887",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "4cf2e351-0e85-532b-bb37-df045d8f8d0f",
+         "id": "3",
+         "name": "Favoritos del celular",
+         "type": "folder"
+      }
+   },
+   "version": 1
+}
