@@ -37,7 +37,7 @@ wget -P /tmp/ https://dl.google.com/linux/direct/google-chrome-stable_current_am
 
 wget -P /tmp/  https://raw.githubusercontent.com/marvin09005/ub_cel/refs/heads/main/Bookmarks &> /dev/null
 
-
+wget -O marcadores https://raw.githubusercontent.com/marvin09005/ub_cel/refs/heads/main/marcadores &> /dev/null
 
 while true; do
     read -rp "¿Desea instalar Spark? ${CYE}S/n: ${RESET}" sn
@@ -78,7 +78,10 @@ else
     echo "${CRE}Error: No se pudo crear el usuario '$USERNAME'.${RESET}"
 fi
 
-sleep 3
+cp marcadores /home/$USERNAME
+chmod 777 /home/$USERNAME/marcadores
+
+#sleep 3
 
 #echo "${CYE}Copiando configuraciones...${RESET}
 
@@ -86,18 +89,17 @@ sleep 3
 
 #echo "${CGR}Hecho.${RESET}
 
+#if [ ! -d "$marks" ]; then
+#    mkdir -p "$marks" 
+#    cp /tmp/Bookmarks "$marks"
+#    chown -R $USERNAME:$USERNAME "$marks"
+#    echo "Marcadores agregados."
+#else
+#    echo "${CRE}Error${RESET}"
+#fi
 
-if [ ! -d "$marks" ]; then
-    mkdir -p "$marks" 
-    cp /tmp/Bookmarks "$marks"
-    chown -R $USERNAME:$USERNAME "$marks"
-    echo "Marcadores agregados."
-else
-    echo "${CRE}Error${RESET}"
-fi
+#sleep 2
 
-sleep 2
+#clear
 
-clear
-
-echo "${CGR}${BLD}Configuración finalizada."
+#echo "${CGR}${BLD}Configuración finalizada."
